@@ -13,13 +13,10 @@ from qgis.PyQt.QtGui import *
 from qgis.networkanalysis import *
 from qgis.analysis import QgsGeometryAnalyzer 
 import processing
-
-
-os.sys.path.append(r'C:\Users\David\Desktop\BachArbeit\Programmierung\New')
-
 from Two_Q_heuristic import euklid
 
 
+''' Implementation of SBB (Streetbased Buffer) which calculates Buffer-Service-Area with Distance close to real Shortest-Path-Distance of given Network'''
 
 def build_shortestPath(graph,startPoint, EndPoint):
     global p, costs
@@ -69,9 +66,6 @@ def heuristic_buffer(graph, sourcenode, impedance, accuracy, pa_name, PointList,
     else:
         ratio_median = ratio
         
-
-    
-    
     firestation = QgsVectorLayer('Point?crs=epsg:32633',pa_name , 'memory')
     prov = firestation.dataProvider()
     feat = QgsFeature()
