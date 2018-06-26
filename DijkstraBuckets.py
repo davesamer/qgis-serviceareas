@@ -1,9 +1,9 @@
 import os
 from qgis.networkanalysis import *
-
-os.sys.path.append(r'C:\Users\David\Desktop\BachArbeit\Programmierung\New')
-
 from GraphAnalyzer_extended import *
+
+''' Implementation of Dijsktra-Algorithm with Buckets first introduced by Dial'''
+''' Temporary nodes are stored in Buckets'''
 
 
 class Buckets():
