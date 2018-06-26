@@ -22,7 +22,7 @@ from heuristic import heuristic_buffer
 from GraphAnalyzer_extended import *
 
 
-path_S = 'path Streetnetwork
+path_S = 'path Streetnetwork'
 path_F = 'path Firestations'
 path_B = 'path boundaries'
 
