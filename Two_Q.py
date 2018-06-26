@@ -2,6 +2,7 @@ import os
 from qgis.networkanalysis import *
 
 ''' Implementation of Two_Q algorithm first introduced by Pallotino'''
+''' Temporary nodes are stored in a Double-Queue'''
 
 from GraphAnalyzer_extended import *
 
