@@ -1,5 +1,5 @@
 # QGis-Serviceareas
-QGis Programm for creating service areas with various algorithms
+QGis Programm for creating service areas with various algorithms.
 Development with Python 2.17 in QGis 2.18.17
 
 
@@ -13,7 +13,7 @@ The following Algorithms can be used:
 
 
 The file Einzugsgebiet.py is the main Programm, where the graph is build out of the given streetnetwork and the Service Area is created
-For parameters you can give impedance of the service area in meters, chosen algorithm and number of firestation of which you want to create service area
+For parameters you can give impedance of the service area in meters, algorithm and number of firestation/s of which you want to create service area
 
 A few test cases are given at the end of Einzugsgebiet.py
 
