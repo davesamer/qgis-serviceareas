@@ -19,24 +19,5 @@ def findEdge(graph, v_idx, neighbor):
         if graph.arc(j).inVertex() == neighbor:
             return j
 
-def NNN(graph, v_idx):
-    Neighbors = []
-    NNN = []
-    N = neighborhood(graph, v_idx)
-    
-    for neighbor_1 in N:
-        for neighbor_2 in neighborhood(graph, neighbor_1):
-            NNN.append(neighbor_2)
-            for neighbor_3 in neighborhood(graph, neighbor_2):
-                NNN.append(neighbor_3)
-                for neighbor_4 in neighborhood(graph, neighbor_3):
-                    NNN.append(neighbor_4)
-                
-    for i in NNN:
-        if i != v_idx and i not in N:
-            if i not in Neighbors:
-                Neighbors.append(i)
-                
-    return Neighbors
-            
-            
+
+                      
