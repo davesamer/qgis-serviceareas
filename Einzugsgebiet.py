@@ -13,8 +13,6 @@ from qgis.networkanalysis import *
 from qgis.analysis import QgsGeometryAnalyzer 
 import processing
 
-os.sys.path.append(r'C:\Users\David\Desktop\BachArbeit\Programmierung\New')
-
 from DijkstraBuckets import dijkstraBuckets
 from DijkstraNaive import dijkstraNaive
 from Two_Q import Two_Q
@@ -24,12 +22,9 @@ from heuristic import heuristic_buffer
 from GraphAnalyzer_extended import *
 
 
-path_root = 'C://Users//David//Desktop//BachArbeit//Praxis'
-
-path_S = path_root+'//Data//Streetnet_Neuhofen_Neighbors_reproject.shp'
-#path_S = path_root+'//Strassennetz_Abschnitt_Neuhofen.shp'
-path_F = path_root+'//Feuerwehrstellen.shp'
-path_B =path_root+'//Data//Gemeindegranzen_AbNeuhofen_Grenze.shp'
+path_S = 'path Streetnetwork
+path_F = 'path Firestations'
+path_B = 'path boundaries'
 
 
         
@@ -212,7 +207,6 @@ def createServiceArea(graph, impedance, algorithm):
         geom = f.geometry()
         area = geom.area() / 1000000
     
-    # set symbology for Service-Area-Layer
     renderer = layer.rendererV2()
     symbol = renderer.symbol()
     symbol.setColor(QColor(226,51,38,70))
@@ -316,7 +310,7 @@ def run_Program(sourcenode, impedance=1000, algorithm='standard', accuracy=2000,
 
 #run_Program([])
 
-'''OPTIMAL'''
+'''Travel Time Zones'''
 
 '''----------QGis Dijkstra-----------'''
 #run_Program([1],3000)
@@ -335,16 +329,12 @@ def run_Program(sourcenode, impedance=1000, algorithm='standard', accuracy=2000,
 #run_Program(2,2000, 'dijkstraBuckets')
 #run_Program([2,3,8],2000, 'dijkstraBuckets') --> takes too much time
 
-'''HEURISTIC'''
+'''Buffer'''
 
-'''---------------heuristic Buffer------------------'''
+'''---------------SBB------------------'''
 #run_Program([2] ,2000, 'heuristic', accuracy=50)
 #run_Program(2 ,2000, 'heuristic', ratio=0.8)
 #run_Program([2,3,8,11,0] ,3000, 'heuristic', ratio=0.8)
-
-'''----------------------BFS-------------------------'''
-#run_Program(2, 4000, 'bFS')
-#run_Program([2,3,8], 2000, 'bFS') --> result is odd
 
 
 
