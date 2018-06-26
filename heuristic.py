@@ -13,10 +13,12 @@ from qgis.PyQt.QtGui import *
 from qgis.networkanalysis import *
 from qgis.analysis import QgsGeometryAnalyzer 
 import processing
-from Two_Q_heuristic import euklid
 
 
 ''' Implementation of SBB (Streetbased Buffer) which calculates Buffer-Service-Area with Distance close to real Shortest-Path-Distance of given Network'''
+
+def euklid(graph, v_idx, t_idx):
+    return sqrt(((graph.vertex(v_idx).point()[0] - graph.vertex(t_idx).point()[0]) ** 2) + ((graph.vertex(v_idx).point()[1] - graph.vertex(t_idx).point()[1]) ** 2))
 
 def build_shortestPath(graph,startPoint, EndPoint):
     global p, costs
