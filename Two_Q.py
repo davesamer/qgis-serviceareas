@@ -1,7 +1,7 @@
 import os
 from qgis.networkanalysis import *
 
-os.sys.path.append(r'C:\Users\David\Desktop\BachArbeit\Programmierung\New')
+''' Implementation of Two_Q algorithm first introduced by Pallotino'''
 
 from GraphAnalyzer_extended import *
 
