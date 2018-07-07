@@ -12,9 +12,9 @@ The following Algorithms can be used:
   - SBB (Streetbased Buffer) - Development of Buffer method
 
 
-The file Einzugsgebiet.py is the main Programm, where the graph is build out of the given streetnetwork and the Service Area is created
+The file main.py is the main Programm, where the graph is build out of the given streetnetwork and the Service Area is created
 For parameters you can give impedance of the service area in meters, algorithm and number of firestation/s of which you want to create service area
 
-A few test cases are given at the end of Einzugsgebiet.py
+A few test cases are given at the end of main.py
 
 For further information and explaination regarding algorithms and implementation details conntact david.roebl@yahoo.com or just ask here.
